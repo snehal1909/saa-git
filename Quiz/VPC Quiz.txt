@@ -1,0 +1,62 @@
+VPC quiz 
+1. A user has created a VPC with two subnets: one public and one private. The user is planning to run the patch update for the instances in the private subnet. How can the instances in the private subnet connect to the internet?
+A: Use the internet gateway with a private IP, 
+B: Allow outbound traffic in the security group for port 80 to allow internet updates
+C: The private subnet can never connect to the internet, D: Use NAT with an elastic IP
+
+2. A user has launched an EC2 instance and installed a website with the Apache webserver. The webserver is running but the user is not able to access the website from the Internet. What can be the possible reason for this failure?
+
+A: The security group of the instance is not configured properly
+B: The instance is not configured with the proper key-pairs., 
+C: The Apache website cannot be accessed from the Internet., 
+D: Instance is not configured with an elastic IP.
+
+3. A user has created a VPC with a subnet and a security group. The user has launched an instance in that subnet and attached a public IP. The user is still unable to connect to the instance. The internet gateway has also been created. What can be the reason for the error?
+ A: The internet gateway is not configured with the route table, 
+ B: The private IP is not present, 
+ C: The outbound traffic on the security group is disabled, 
+ D: The internet gateway is not configured with the security group
+
+4.A user has recently started using EC2. The user launched one EC2 instance in the default subnet in EC2-VPC Which of the below mentioned options is not attached or available with the EC2 instance when it is launched?
+
+A: Public IP address, 
+B: Internet gateway, 
+C: Elastic IP, 
+D: Private IP address,  
+
+5. Instance A and instance B are running in two different subnets A and B of a VPC. Instance A is not able to ping instance B. What are two possible reasons for this?
+
+A: The security group attached to instance B does not allow inbound ICMP traffic, 
+B: The policy linked to the IAM role on instance A is not configured correctly, 
+C: The routing table of subnet A has no target route to subnet B 
+
+6. You are currently hosting multiple applications in a VPC and have logged numerous port scans coming in from a specific IP address block. Your security team has requested that all access from the offending IP address block be denied for the next 24 hours. Which of the following is the best method to quickly and temporarily deny access from the specified IP address block?
+
+A: Add a rule to all of the VPC 5 Security Groups to deny access from the IP address block, 
+B: Modify the Network ACLs associated with all public subnets in the VPC to deny access from the IP address block, 
+C: Modify the Windows Firewall settings on all Amazon Machine Images (AMIs) that your organization uses in that VPC to deny access from the IP address block, 
+
+
+7. Your organization has recently adapted to AWS . They have asked you to deploy private servers on AWS which should be able to pull/push sensitive client data to/from S3 bucket as it has been selected as your primary storage option . 
+What is the most secure way to achieve this ?
+
+A: Launch an instance with Public IP and use aws cli to access S3 bucket, 
+B: Create an instance with private ip, attach NAT gateway to corresponding subnet . Configure IAM user keys on instance to access S3, 
+C: Create instance in private subnet. Create S3 endpoint for corresponding route table . Attach IAM role to EC2 with custom policy to access S3,
+
+8 . A company has an AWS account that contains three VPCs (Dev, Test, and Prod) in the same region. Test is peered to both Prod and Dev. All VPCs have non-overlapping CIDR blocks. The company wants to push minor code releases from Dev to Prod to speed up time to market. Which of the following options helps the company accomplish this?
+
+A: Create a new peering connection Between Prod and Dev along with appropriate routes., 
+B: Attach a second gateway to Dev. Add a new entry in the Prod route table identifying the gateway as the target., 
+C: he VPCs have non-overlapping CIDR blocks in the same account. The route tables contain local routes for all VPCs., 
+
+9. You are a Solutions Architect working for a large multi-national bank in the Asia-Pacific region. You designed an application architecture that is deployed to AWS, which has four Reserved EC2 instances. To be able to securely and easily manage these instances, you created a bastion host in your VPC. When your CTO found out, he was concerned and asked you about what you have done.
+
+
+A: A bastion host is an EC2 instance in a private subnet of your VPC and is typically accessed using SSH or RDP. Once remote connectivity has been established with the bastion host, it then acts as a ‘jump’ server that allows you to use SSH or RDP to log into other EC2 instances deployed in public subnets., 
+B: A bastion host is an EC2 instance in a public subnet of your VPC and is typically accessed using SSH or RDP. Once remote connectivity has been established with the bastion host, it then acts as a ‘jump’ server, allowing you to use HTTPS to log into other EC2 instances deployed in private subnets., 
+C: A bastion host is an EC2 instance in a public subnet of your VPC and is typically accessed using SSH or RDP. Once remote connectivity has been established with a bastion host, it then acts as a ‘jump’ server, allowing you to use SSH or RDP to log into other EC2 instances deployed in private subnets., 
+D: A bastion host is an EC2 instance in a private subnet of your VPC and is typically accessed using SSH or RDP. Once remote connectivity has been established with the bastion host, it then acts as a 'jump' server,  allowing you to use HTTPS to log into other EC2 instances deployed in public subnets
+
+
+
